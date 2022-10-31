@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="insta.css">
+    <style>
+        :root {
+    --text-secondary: #374151 ;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.container {
+    display: flex;
+}
+.left {
+    width: 30rem;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.center {
+    width: 100%;
+    background-color: #fafafa;
+    overflow-y: scroll;
+}
+
+.right {
+    width: 30rem;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.col {
+    height: 100vh;
+}
+.nav {
+    width: 100%;
+    background-color: #f8fafc;
+    border-bottom: 1px solid#64748b;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+.nav-main {
+    display: flex;
+}
+
+.logo {
+    width: 30rem;
+}
+
+.search {
+    width: 100%;
+}
+
+.menu {
+    width: 30rem;
+    padding: 10px;
+}
+
+.d-fles {
+    display: flex;
+    
+    
+}
+
+.just {
+    justify-content: start;
+}
+
+.align {
+    align-items: center;
+    
+}
+
+.space {
+    justify-content: space-between;
+}
+
+.even {
+    justify-content: space-evenly;
+}
+
+.just-center {
+    justify-content: center;
+}
+
+.column {
+    flex-direction: column;
+    
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.search-box {
+    width: 450px;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #fe4f41;
+    border: none;
+    color: #fff;
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+
+
+
+.padding {
+    padding: 5px;
+}
+
+.pd {
+    padding: 20px;
+}
+
+/* Left */
+
+.w-100 {
+    width: 40%;
+    border-radius: 70%;
+    border: 5px solid #dc2626;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bottom-1 {
+    margin-bottom: 20px;
+}
+
+.top {
+    margin-top: 20px;
+}
+
+.top-1 {
+    margin-top: 10px;
+}
+
+.top-2 {
+    margin-top: 30px;
+}
+
+.ms {
+    padding-left: 10px;
+}
+
+.me {
+    padding-right: 10px;
+}
+
+.mr {
+    margin-right: 20px;
+}
+
+.text-secondary {
+    color: var(--text-secondary)
+}
+
+/* Center */
+
+
+
+.stories-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #dc2626;
+}
+
+.but {
+    border: none;
+    padding: 10px;
+
+}
+
+.bg {
+    background-color: transparent;
+}
+
+.rounded-pill {
+    border-radius: 200px;
+}
+
+
+
+.post-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+
+.px-6 {
+    padding-left:50px ;
+    padding-right: 50px;
+}
+
+.px-2 {
+    padding-left:20px ;
+    padding-right: 20px;
+
+}
+
+.px-9 {
+    padding-left:90px ;
+    padding-right: 90px;
+
+}
+
+
+.width {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.post-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.post-comment-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.post-comment-box {
+    border: 1px solid;
+    border-radius: 200px;
+    width: 100%;
+}
+
+.post-comment-box input {
+    border-style: none;
+    background-color: transparent;
+}
+
+.post-comment-box input:focus {
+    outline: none;
+}
+
+.width-1 {
+    width: 100%;
+}
+
+.tf-feeds {
+    column-count: 2;
+    column-gap: 10px;
+}
+
+.tf-img {
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.sugg-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.left-menu {
+    
+    list-style: none;
+}
+
+.menu-list-item {
+    padding-left: 35px;
+    
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.menu-list-item.active {
+    border-left: 5px solid;
+    color:#fe446c ;
+}
+
+.font {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    </style>
+</head>
+</body>
+    <div class="nav">
+     <div class="nav-main">
+            <div class="logo">
+                <div class="d-fles just align">
+                    <i class="fab fa-instagram fa-2x"></i>
+                <span class="ms font">Instagram</span>
+                </div>
+            </div>
+                <div class="search px-9">
+                    <div class="d-fles space">
+                        <div class="search-box d-fles space align">
+                            <i class="fas fa-search padding"></i>
+                            <input type="text" placeholder="Search">
+                            <i class="fas fa-microphone"></i>
+
+                        </div>
+                    <button class="btn"><i class="fas fa-plus"></i> Create New Post</button>
+                    </div>
+                    
+                </div>
+                <div class="menu d-fles align even">
+                    <i class="fas fa-paper-plane"></i>
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-bars"></i>
+                </div>
+
+        
+            
+        </div>
+    </div>
+    
+    <div class="container">
+        
+        <div class="col left">
+            <div class="text-center bottom-1 top">
+                <img src="./New folder (2)/pengiun.jpg" class="w-100" alt="">
+                <h4 class="top-1">Britney</h4>
+                <span class="text-secondary">Seoul, Korea</span>
+                
+                </div>
+                <div class="d-fles text-center just-center align ">
+                    <div class="d-fles column grow">
+                        <span class="text-secondary">56</span>
+                        <span class="font">Posts</span>
+                    </div>
+                    <div class="d-fles column grow">
+                        <span class="text-secondary">150</span>
+                        <span class="font">Followers</span>
+                    </div>
+                    <div class="d-fles column grow">
+                        <span class="text-secondary">169</span>
+                        <span class="font">Followings</span>
+                    </div>
+                </div>
+
+                <div class="top-2">
+                    <ul class="left-menu">
+                        <li class="menu-list-item active bottom-1">
+                            <i class="fas fa-home"></i>
+                            <span class="ms font text-secondary">Feed</span>
+                        </li>
+
+                        <li class="menu-list-item bottom-1">
+                            <i class="fa-solid fa-compass"></i>
+                            <span class="ms font text-secondary">Explore</span>
+                        </li>
+
+                        <li class="menu-list-item bottom-1">
+                            <i class="fas fa-bookmark"></i>
+                            <span class="ms font text-secondary">My Favourites</span>
+                        </li>
+
+                        <li class="menu-list-item bottom-1">
+                            <i class="fas fa-paper-plane"></i>
+                            <span class="ms font text-secondary">Direct</span>
+                        </li>
+
+                        <li class="menu-list-item bottom-1">
+                            <i class="fas fa-tv"></i>
+                            <span class="ms font text-secondary">IG TV</span>
+                        </li>
+
+                        <li class="menu-list-item bottom-1">
+                            <i class="far fa-chart-bar"></i>
+                            <span class="ms font text-secondary">Stats</span>
+                        </li>
+
+                        <li class="menu-list-item bottom-1">
+                            <i class="fas fa-cog"></i>
+                            <span class="ms font text-secondary">Setting</span>
+                        </li>
+                        <li class="menu-list-item bottom-1">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span class="ms font text-secondary">Log out</span>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="px-9 col center">
+            <div class="top d-fles space align">
+                <h3>Stories</h3>
+                <span>Watch all</span>
+            </div>
+            <div class="d-fles even">
+                <div class="stories-circle top d-fles column just-center align bottom-1 ">
+                    <div class=" d-fles align just-center stories-image bottom-1 ">
+                        <i class="fas fa-plus"></i>
+                        
+                        </div>
+
+                        <span class="text-secondary">Your Story</span>
+
+                </div>
+
+                <div class="stories-circle top d-fles column just-center align bottom-1">
+                    <img src="./New folder (2)/pengiun.jpg"  class="stories-image bottom-1" alt="">
+                    <span class="text-secondary">britney</span>
+
+                </div>
+
+                <div class="stories-circle top d-fles column just-center align bottom-1">
+                    <img src="./New folder (2)/pengiun.jpg"  class="stories-image bottom-1" alt="">
+                    <span class="text-secondary">kjk76</span>
+
+                </div>
+
+                <div class="stories-circle top d-fles column just-center align bottom-1">
+                    <img src="./New folder (2)/pengiun.jpg"  class="stories-image bottom-1" alt="">
+                    <span class="text-secondary">agustd</span>
+
+                </div>
+
+                <div class="stories-circle top d-fles column just-center align bottom-1">
+                    <img src="./New folder (2)/pengiun.jpg"  class="stories-image bottom-1" alt="">
+                    <span class="text-secondary">thv</span>
+
+                </div>
+
+                <div class="stories-circle top d-fles column just-center align bottom-1">
+                    <img src="./New folder (2)/pengiun.jpg"  class="stories-image bottom-1" alt="">
+                    <span class="text-secondary">lalalalisa_m</span>
+
+                </div>
+            </div>
+
+            <div class="top d-fles space align">
+                <h3>Feeds</h3>
+            
+                    <div>
+                        <button class="but rounded-pill px-2 bg">Latest</button>
+                        <button class="but rounded-pill px-2">Popular</button>
+                    </div>
+            </div>
+            <div class="">
+                <div class="post-card top bg-white">
+                    <div class="d-fles space align">
+                        <div class="d-fles just align">
+                            <img src="./New folder (2)/pengiun.jpg" class="post-img" alt="">
+                            <div class="ms">
+                                <h5>britney</h5>
+                                <span class="text-secondary">Seoul, Korea</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="width">
+                        <img src="./New folder (2)/column 1df.jpg" class="width" alt="">
+                    </div>
+                    <div class="d-fles just align top">
+                        <div class="grow">
+                            <i class="fas fa-heart me"></i>
+                            <span>15.5k Like</span>
+                        </div>
+    
+                        <div class="grow">
+                            <i class="fas fa-comment me"></i>
+                            <span>15.5k Comment</span>
+                        </div>
+    
+                        <div class="grow">
+                            <i class="fas fa-share-alt me"></i>
+                            <span>15.5k Share</span>
+                        </div>
+    
+                        <div class="grow">
+                            <i class="fas fa-bookmark me"></i>
+                            <span>15.5k Saved</span>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="top">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, fugiat nostrum consequuntur illum, eius esse perspiciatis iusto ducimus illo consectetur officia. Iure eveniet earum numquam tenetur nisi, voluptatibus vel harum.
+                        </p>
+
+                        <div class="d-fles align top">
+                            <img src="./New folder (2)/pengiun.jpg" class="post-comment-img mr" alt="">
+                            <div class="post-comment-box d-fles space align">
+                                <input type="text" class="width-1 padding" placeholder="Write your comment">
+                                <div class="d-fles">
+                                    <i class="fas fa-paperclip padding"></i>
+                                    <i class="far fa-smile padding"></i>
+                                    <i class="far fa-image padding"></i>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+
+                    
+
+                
+                
+                </div>
+
+                <div class="post-card top bg-white">
+                    <div class="d-fles space align">
+                        <div class="d-fles just align">
+                            <img src="./New folder (2)/pengiun.jpg" class="post-img" alt="">
+                            <div class="ms">
+                                <h5>britney</h5>
+                                <span class="text-secondary">Seoul, Korea</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="width">
+                        <img src="./New folder (2)/column 1df.jpg" class="width" alt="">
+                    </div>
+                    <div class="d-fles just align top">
+                        <div class="grow">
+                            <i class="fas fa-heart me"></i>
+                            <span>15.5k Like</span>
+                        </div>
+    
+                        <div class="grow">
+                            <i class="fas fa-comment me"></i>
+                            <span>15.5k Comment</span>
+                        </div>
+    
+                        <div class="grow">
+                            <i class="fas fa-share-alt me"></i>
+                            <span>15.5k Share</span>
+                        </div>
+    
+                        <div class="grow">
+                            <i class="fas fa-bookmark me"></i>
+                            <span>15.5k Saved</span>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="top">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, fugiat nostrum consequuntur illum, eius esse perspiciatis iusto ducimus illo consectetur officia. Iure eveniet earum numquam tenetur nisi, voluptatibus vel harum.
+                        </p>
+
+                        <div class="d-fles align top">
+                            <img src="./New folder (2)/pengiun.jpg" class="post-comment-img mr" alt="">
+                            <div class="post-comment-box d-fles space align">
+                                <input type="text" class="width-1 padding" placeholder="Write your comment">
+                                <div class="d-fles">
+                                    <i class="fas fa-paperclip padding"></i>
+                                    <i class="far fa-smile padding"></i>
+                                    <i class="far fa-image padding"></i>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+
+                    
+
+                
+                
+                </div>
+            </div>
+            
+                
+            
+        
+
+            
+</div>
+<div class="col right">
+    <div class="pd">
+        <h4>Trending Feeds</h4>
+        <div class="tf-feeds top">
+            <img src="./New folder (2)/column 4.jpg" class="tf-img width-1" alt="">
+            <img src="./New folder (2)/column 4.jpg" class="tf-img width-1" alt="">
+            <img src="./New folder (2)/column 4.jpg" class="tf-img width-1" alt="">
+            <img src="./New folder (2)/column 4.jpg" class="tf-img width-1" alt="">
+        </div>
+        
+    </div>
+
+    <div class="pd">
+        <h4>Suggestion For You</h4>
+        <div>
+            <div class="d-fles just align top ">
+                <img src="./New folder (2)/pengiun.jpg" class="sugg-img width-1"  alt="">
+                <div class="ms">
+                    <h5>Britney</h5>
+                    <span class="text-secondary">Seoul, Korea</span>
+                </div>
+            </div>
+
+            <div class="d-fles just align top ">
+                <img src="./New folder (2)/pengiun.jpg" class="sugg-img width-1"  alt="">
+                <div class="ms">
+                    <h5>Britney</h5>
+                    <span class="text-secondary">Seoul, Korea</span>
+                </div>
+            </div>
+
+            <div class="d-fles just align top ">
+                <img src="./New folder (2)/pengiun.jpg" class="sugg-img width-1"  alt="">
+                <div class="ms">
+                    <h5>Britney</h5>
+                    <span class="text-secondary">Seoul, Korea</span>
+                </div>
+            </div>
+
+            <div class="d-fles just align top ">
+                <img src="./New folder (2)/pengiun.jpg" class="sugg-img width-1"  alt="">
+                <div class="ms">
+                    <h5>Britney</h5>
+                    <span class="text-secondary">Seoul, Korea</span>
+                </div>
+            </div>
+
+            <div class="d-fles just align top ">
+                <img src="./New folder (2)/pengiun.jpg" class="sugg-img width-1"  alt="">
+                <div class="ms">
+                    <h5>Britney</h5>
+                    <span class="text-secondary">Seoul, Korea</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</body>
+</html>
